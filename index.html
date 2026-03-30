@@ -3,39 +3,49 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Calculadora</title>
+		<title>Calculadora Web | jabssdev</title>
+
+		<meta name="description" content="Calculadora web con operaciones básicas: suma, resta, multiplicación y división. Construida con HTML, CSS y JavaScript vanilla." />
+		<meta name="author" content="jabssdev" />
+		<meta property="og:title" content="Calculadora Web" />
+		<meta property="og:description" content="Calculadora web con operaciones básicas construida con HTML, CSS y JavaScript vanilla." />
+		<meta property="og:type" content="website" />
+
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
 		<link rel="stylesheet" href="style.css" />
 	</head>
 
 	<body>
-		<h1>Calculadora</h1>
-		<div class="calculadora">
-			<input type="text" id="pantalla" readonly placeholder="0" />
-			<div class="botones">
-				<button onclick="addToScreen('1')">1</button>
-				<button onclick="addToScreen('2')">2</button>
-				<button onclick="addToScreen('3')">3</button>
-				<button class="operador" onclick="addToScreen('+')">+</button>
+		<main>
+			<h1>Calculadora</h1>
+			<div class="calculadora" role="application" aria-label="Calculadora">
+				<input type="text" id="pantalla" readonly placeholder="0" aria-label="Pantalla de la calculadora" aria-live="polite" aria-atomic="true" />
+				<div class="botones" role="group" aria-label="Botones de la calculadora">
+					<button onclick="addToScreen('1')">1</button>
+					<button onclick="addToScreen('2')">2</button>
+					<button onclick="addToScreen('3')">3</button>
+					<button class="operador" onclick="addToScreen('+')" aria-label="Suma">+</button>
 
-				<button onclick="addToScreen('4')">4</button>
-				<button onclick="addToScreen('5')">5</button>
-				<button onclick="addToScreen('6')">6</button>
-				<button class="operador" onclick="addToScreen('-')">−</button>
+					<button onclick="addToScreen('4')">4</button>
+					<button onclick="addToScreen('5')">5</button>
+					<button onclick="addToScreen('6')">6</button>
+					<button class="operador" onclick="addToScreen('-')" aria-label="Resta">−</button>
 
-				<button onclick="addToScreen('7')">7</button>
-				<button onclick="addToScreen('8')">8</button>
-				<button onclick="addToScreen('9')">9</button>
-				<button class="operador" onclick="addToScreen('*')">×</button>
+					<button onclick="addToScreen('7')">7</button>
+					<button onclick="addToScreen('8')">8</button>
+					<button onclick="addToScreen('9')">9</button>
+					<button class="operador" onclick="addToScreen('*')" aria-label="Multiplicación">×</button>
 
-				<button onclick="addToScreen('0')">0</button>
-				<button onclick="addToScreen('.')">.</button>
-				<button class="operador" onclick="addToScreen('/')">÷</button>
-				<button class="igual" onclick="calculate()">=</button>
+					<button onclick="addToScreen('0')">0</button>
+					<button onclick="addToScreen('.')" aria-label="Punto decimal">.</button>
+					<button class="operador" onclick="addToScreen('/')" aria-label="División">÷</button>
+					<button class="igual" onclick="calculate()" aria-label="Calcular resultado">=</button>
 
-				<button class="limpiar" onclick="clearScreen()">AC</button>
-				<button class="borrar" onclick="deleteLastCharacter()">⌫</button>
+					<button class="limpiar" onclick="clearScreen()" aria-label="Limpiar pantalla">AC</button>
+					<button class="borrar" onclick="deleteLastCharacter()" aria-label="Borrar último carácter">⌫</button>
+				</div>
 			</div>
-		</div>
+		</main>
 
 		<script src="script.js"></script>
 	</body>
