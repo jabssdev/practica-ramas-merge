@@ -12,28 +12,28 @@
 		<div class="calculadora">
 			<input type="text" id="pantalla" readonly placeholder="0" />
 			<div class="botones">
-				<button onclick="agregarALaPantalla('1')">1</button>
-				<button onclick="agregarALaPantalla('2')">2</button>
-				<button onclick="agregarALaPantalla('3')">3</button>
-				<button class="operador" onclick="agregarALaPantalla('+')">+</button>
+				<button onclick="addToScreen('1')">1</button>
+				<button onclick="addToScreen('2')">2</button>
+				<button onclick="addToScreen('3')">3</button>
+				<button class="operador" onclick="addToScreen('+')">+</button>
 
-				<button onclick="agregarALaPantalla('4')">4</button>
-				<button onclick="agregarALaPantalla('5')">5</button>
-				<button onclick="agregarALaPantalla('6')">6</button>
-				<button class="operador" onclick="agregarALaPantalla('-')">−</button>
+				<button onclick="addToScreen('4')">4</button>
+				<button onclick="addToScreen('5')">5</button>
+				<button onclick="addToScreen('6')">6</button>
+				<button class="operador" onclick="addToScreen('-')">−</button>
 
-				<button onclick="agregarALaPantalla('7')">7</button>
-				<button onclick="agregarALaPantalla('8')">8</button>
-				<button onclick="agregarALaPantalla('9')">9</button>
-				<button class="operador" onclick="agregarALaPantalla('*')">×</button>
+				<button onclick="addToScreen('7')">7</button>
+				<button onclick="addToScreen('8')">8</button>
+				<button onclick="addToScreen('9')">9</button>
+				<button class="operador" onclick="addToScreen('*')">×</button>
 
-				<button onclick="agregarALaPantalla('0')">0</button>
-				<button onclick="agregarALaPantalla('.')">.</button>
-				<button class="operador" onclick="agregarALaPantalla('/')">÷</button>
-				<button class="igual" onclick="calcular()">=</button>
+				<button onclick="addToScreen('0')">0</button>
+				<button onclick="addToScreen('.')">.</button>
+				<button class="operador" onclick="addToScreen('/')">÷</button>
+				<button class="igual" onclick="calculate()">=</button>
 
-				<button class="limpiar" onclick="limpiarPantalla()">AC</button>
-				<button class="borrar" onclick="borrarUltimo()">⌫</button>
+				<button class="limpiar" onclick="clearScreen()">AC</button>
+				<button class="borrar" onclick="deleteLastCharacter()">⌫</button>
 			</div>
 		</div>
 
